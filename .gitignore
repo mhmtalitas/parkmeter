@@ -1,0 +1,104 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+
+# Production builds
+build/
+dist/
+out/
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rust
+target/
+*/target/
+Cargo.lock
+# Keep Cargo.lock for applications, comment above line for libraries
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Wasm
+*.wasm
+
+# Coverage reports
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Temporary folders
+tmp/
+temp/
+
+# Runtime files
+*.tgz
+*.tar.gz
+
+# Next.js specific
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+
+# Stellar/Soroban specific
+.soroban/
+test_snapshots/
+contracts/test_snapshots/
+
+# Local development
+.cache/
+.temp/ 
