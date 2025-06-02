@@ -1,9 +1,24 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#0066CC"/>
-  <rect x="10" y="6" width="12" height="16" rx="2" fill="white"/>
-  <rect x="12" y="8" width="8" height="6" rx="1" fill="#0066CC"/>
-  <circle cx="16" cy="19" r="1.5" fill="#0066CC"/>
-  <rect x="14" y="22" width="4" height="8" rx="1" fill="white"/>
-  <rect x="8" y="28" width="16" height="2" rx="1" fill="#FFD700"/>
-  <text x="16" y="12" text-anchor="middle" fill="white" font-size="6" font-weight="bold">P</text>
+  <!-- Main parking meter head -->
+  <circle cx="16" cy="11" r="8" fill="#3498DB"/>
+  
+  <!-- Clock/gauge display -->
+  <circle cx="16" cy="11" r="6" fill="white"/>
+  <circle cx="16" cy="11" r="5" fill="#3498DB"/>
+  
+  <!-- Clock indicator -->
+  <line x1="16" y1="7" x2="16" y2="9" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- P letter in center -->
+  <text x="16" y="14" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Arial">P</text>
+  
+  <!-- Orbital ring -->
+  <ellipse cx="16" cy="11" rx="10" ry="6" fill="none" stroke="#3498DB" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="10" cy="14" r="1" fill="#3498DB"/>
+  
+  <!-- Meter pole -->
+  <rect x="14" y="19" width="4" height="10" fill="#3498DB" rx="2"/>
+  
+  <!-- M letter at bottom -->
+  <text x="16" y="27" text-anchor="middle" fill="#3498DB" font-size="8" font-weight="bold" font-family="Arial">M</text>
 </svg> 
