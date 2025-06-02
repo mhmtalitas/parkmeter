@@ -11,6 +11,17 @@ export const en: Translations = {
   connected: "Connected Wallet",
   disconnect: "Disconnect",
   refreshBalance: "Refresh Balance",
+  connecting: "Connecting...",
+  connectionFailed: "Wallet connection failed.",
+  freighterConnectionFailed: "Freighter connection failed. Try manual connection.",
+  manualConnectionTitle: "Manual Wallet Connection",
+  manualConnectionDesc: "Enter your Stellar wallet address manually:",
+  stellarAddress: "Stellar Address",
+  stellarAddressHelper: "Enter a 56-character Stellar address starting with G",
+  useTestAddress: "Use Test Address",
+  manualConnectionNote: "This is for display only. Real wallet connection is required for transactions.",
+  connectButton: "Connect",
+  invalidStellarAddress: "Enter a valid Stellar address (56 characters starting with G)",
   
   // Parking Entry
   vehicleEntry: "Vehicle Entry Record",

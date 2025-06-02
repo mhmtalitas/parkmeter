@@ -75,51 +75,51 @@ function HomePage() {
       {/* Header */}
       <Navbar bg="white" className="shadow-sm" style={{ backdropFilter: 'blur(10px)', backgroundColor: 'rgba(255, 255, 255, 0.95) !important' }}>
         <Container fluid>
-          <div className="d-flex justify-content-between align-items-center w-100">
-            {/* Left side - Language Switch */}
-            <div className="d-flex align-items-center">
-              <ButtonGroup size="sm">
-                <Button 
-                  variant={language === 'tr' ? 'primary' : 'outline-primary'}
-                  onClick={() => setLanguage('tr')}
-                  style={{ minWidth: '50px' }}
-                >
-                  TR
-                </Button>
-                <Button 
-                  variant={language === 'en' ? 'primary' : 'outline-primary'}
-                  onClick={() => setLanguage('en')}
-                  style={{ minWidth: '50px' }}
-                >
-                  EN
-                </Button>
-              </ButtonGroup>
-            </div>
-
+          <div className="d-flex justify-content-center align-items-center w-100">
             {/* Center - Brand */}
             <Navbar.Brand className="fw-bold text-primary d-flex align-items-center">
               <LogoIcon size={24} />
               {t.appTitle}
             </Navbar.Brand>
-
-            {/* Right side - Spacer for balance */}
-            <div style={{ width: '100px' }}></div>
           </div>
         </Container>
       </Navbar>
 
-      {/* Wallet Connection Strip */}
+      {/* Language & Wallet Connection Strip */}
       <div className="bg-light border-bottom py-2">
         <Container fluid>
           <Row>
             <Col>
-              <div className="d-flex justify-content-end align-items-center">
-                <small className="text-muted me-3">{t.wallet}</small>
-                <div className="position-relative">
-                  <WalletConnect 
-                    onWalletConnected={handleWalletConnected}
-                    connectedWallet={connectedWallet}
-                  />
+              <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+                {/* Left side - Language Switch */}
+                <div className="d-flex align-items-center order-2 order-sm-1">
+                  <ButtonGroup size="sm">
+                    <Button 
+                      variant={language === 'tr' ? 'primary' : 'outline-primary'}
+                      onClick={() => setLanguage('tr')}
+                      style={{ minWidth: '45px' }}
+                    >
+                      TR
+                    </Button>
+                    <Button 
+                      variant={language === 'en' ? 'primary' : 'outline-primary'}
+                      onClick={() => setLanguage('en')}
+                      style={{ minWidth: '45px' }}
+                    >
+                      EN
+                    </Button>
+                  </ButtonGroup>
+                </div>
+
+                {/* Right side - Wallet */}
+                <div className="d-flex align-items-center order-1 order-sm-2">
+                  <small className="text-muted me-2 d-none d-sm-inline">{t.wallet}</small>
+                  <div className="position-relative">
+                    <WalletConnect 
+                      onWalletConnected={handleWalletConnected}
+                      connectedWallet={connectedWallet}
+                    />
+                  </div>
                 </div>
               </div>
             </Col>
@@ -129,13 +129,13 @@ function HomePage() {
 
       <Container fluid className="py-4">
         <Row>
-          <Col lg={8} className="mx-auto">
+          <Col lg={8} xl={6} className="mx-auto">
             {/* Header */}
-            <div className="text-center mb-5">
-              <h1 className="display-4 fw-bold text-primary mb-3">
+            <div className="text-center mb-4 mb-md-5">
+              <h1 className="display-5 display-md-4 fw-bold text-primary mb-3">
                 {language === 'tr' ? 'Stellar Network Otopark Sistemi' : 'Stellar Network Parking System'}
               </h1>
-              <p className="lead text-muted">
+              <p className="lead text-muted px-2">
                 {language === 'tr' 
                   ? 'Blockchain teknolojisi ile akıllı ödeme çözümü'
                   : 'Smart payment solution with blockchain technology'
@@ -144,27 +144,27 @@ function HomePage() {
             </div>
 
             {/* İstatistikler */}
-            <Row className="mb-4">
-              <Col md={4}>
-                <Card className="parking-card text-center">
-                  <Card.Body>
-                    <h3 className="text-primary">{activeVehicles}</h3>
+            <Row className="mb-4 g-2 g-md-3">
+              <Col md={4} className="mb-2 mb-md-0">
+                <Card className="parking-card text-center h-100">
+                  <Card.Body className="py-3">
+                    <h3 className="text-primary mb-1">{activeVehicles}</h3>
                     <small className="text-muted">{t.activeVehicles}</small>
                   </Card.Body>
                 </Card>
               </Col>
-              <Col md={4}>
-                <Card className="parking-card text-center">
-                  <Card.Body>
-                    <h3 className="text-success">{paidVehicles}</h3>
+              <Col md={4} className="mb-2 mb-md-0">
+                <Card className="parking-card text-center h-100">
+                  <Card.Body className="py-3">
+                    <h3 className="text-success mb-1">{paidVehicles}</h3>
                     <small className="text-muted">{t.paidVehicles}</small>
                   </Card.Body>
                 </Card>
               </Col>
               <Col md={4}>
-                <Card className="parking-card text-center">
-                  <Card.Body>
-                    <h3 className="text-info">{totalVehicles}</h3>
+                <Card className="parking-card text-center h-100">
+                  <Card.Body className="py-3">
+                    <h3 className="text-info mb-1">{totalVehicles}</h3>
                     <small className="text-muted">{t.totalVehicles}</small>
                   </Card.Body>
                 </Card>

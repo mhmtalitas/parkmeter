@@ -11,6 +11,17 @@ export interface Translations {
   connected: string;
   disconnect: string;
   refreshBalance: string;
+  connecting: string;
+  connectionFailed: string;
+  freighterConnectionFailed: string;
+  manualConnectionTitle: string;
+  manualConnectionDesc: string;
+  stellarAddress: string;
+  stellarAddressHelper: string;
+  useTestAddress: string;
+  manualConnectionNote: string;
+  connectButton: string;
+  invalidStellarAddress: string;
   
   // Parking Entry
   vehicleEntry: string;

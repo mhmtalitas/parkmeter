@@ -45,11 +45,11 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
         onWalletConnected(publicKey);
         console.log('Wallet connected:', publicKey);
       } else {
-        setError('Cüzdan bağlantısı başarısız oldu.');
+        setError(t.connectionFailed);
       }
     } catch (error: any) {
       console.error('Wallet connection failed:', error);
-      setError('Freighter bağlantısı başarısız. Manuel bağlantı deneyin.');
+      setError(t.freighterConnectionFailed);
     } finally {
       setIsConnecting(false);
     }
@@ -62,7 +62,7 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
       setManualAddress('');
       setError(null);
     } else {
-      alert('Geçerli bir Stellar adres girin (G ile başlayan 56 karakter)');
+      alert(t.invalidStellarAddress);
     }
   };
 
@@ -147,7 +147,7 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
           {isConnecting ? (
             <>
               <span className="spinner-border spinner-border-sm me-2" />
-              Bağlanıyor...
+              {t.connecting}
             </>
           ) : (
             <>
@@ -178,16 +178,16 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
       {/* Manuel Bağlantı Modal */}
       <Modal show={showManualModal} onHide={() => setShowManualModal(false)} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Manuel Cüzdan Bağlantısı</Modal.Title>
+          <Modal.Title>{t.manualConnectionTitle}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p className="text-muted mb-3">
-            Stellar cüzdan adresinizi manuel olarak girin:
+            {t.manualConnectionDesc}
           </p>
           
           <Form>
             <Form.Group className="mb-3">
-              <Form.Label>Stellar Adresi</Form.Label>
+              <Form.Label>{t.stellarAddress}</Form.Label>
               <InputGroup>
                 <InputGroup.Text>
                   <i className="bi bi-wallet2"></i>
@@ -201,7 +201,7 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
                 />
               </InputGroup>
               <Form.Text className="text-muted">
-                G ile başlayan 56 karakterlik Stellar adresi girin
+                {t.stellarAddressHelper}
               </Form.Text>
             </Form.Group>
             
@@ -212,14 +212,14 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
                 onClick={() => setManualAddress('GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWHF')}
               >
                 <i className="bi bi-clipboard me-1"></i>
-                Test Adresi Kullan
+                {t.useTestAddress}
               </Button>
             </div>
           </Form>
 
           <Alert variant="info" className="small">
             <i className="bi bi-info-circle me-2"></i>
-            <strong>Not:</strong> Bu sadece görüntüleme içindir. İşlem yapabilmek için gerçek cüzdan bağlantısı gereklidir.
+            <strong>Not:</strong> {t.manualConnectionNote}
           </Alert>
         </Modal.Body>
         <Modal.Footer>
@@ -228,7 +228,7 @@ export default function WalletConnect({ onWalletConnected, connectedWallet }: Wa
           </Button>
           <Button variant="primary" onClick={handleManualConnect}>
             <i className="bi bi-check-circle me-2"></i>
-            Bağla
+            {t.connectButton}
           </Button>
         </Modal.Footer>
       </Modal>

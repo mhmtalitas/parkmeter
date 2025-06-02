@@ -11,6 +11,17 @@ export const tr: Translations = {
   connected: "Bağlı Cüzdan",
   disconnect: "Bağlantıyı Kes",
   refreshBalance: "Bakiye Yenile",
+  connecting: "Bağlanıyor...",
+  connectionFailed: "Cüzdan bağlantısı başarısız oldu.",
+  freighterConnectionFailed: "Freighter bağlantısı başarısız. Manuel bağlantı deneyin.",
+  manualConnectionTitle: "Manuel Cüzdan Bağlantısı",
+  manualConnectionDesc: "Stellar cüzdan adresinizi manuel olarak girin:",
+  stellarAddress: "Stellar Adresi",
+  stellarAddressHelper: "G ile başlayan 56 karakterlik Stellar adresi girin",
+  useTestAddress: "Test Adresi Kullan",
+  manualConnectionNote: "Bu sadece görüntüleme içindir. İşlem yapabilmek için gerçek cüzdan bağlantısı gereklidir.",
+  connectButton: "Bağla",
+  invalidStellarAddress: "Geçerli bir Stellar adres girin (G ile başlayan 56 karakter)",
   
   // Parking Entry
   vehicleEntry: "Araç Giriş Kaydı",
