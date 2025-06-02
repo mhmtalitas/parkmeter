@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "🅿️ ParkingMeter - Stellar Blockchain Park Sistemi",
+  title: "Parking Meter",
   description: "Stellar Soroban tabanlı akıllı park metre sistemi. QR kod ile ödeme, blockchain güvenliği ve şeffaf ücretlendirme.",
   keywords: ["parking", "stellar", "blockchain", "soroban", "xlm", "smart contract", "park metre"],
   authors: [{ name: "ParkingMeter Team" }],

@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Alert, Navbar, Button, ButtonGroup } from 'react-bootstrap';
 import WalletConnect from '@/components/WalletConnect';
 import ParkingEntryForm from '@/components/ParkingEntry';
 import ParkingList from '@/components/ParkingList';
+import LogoIcon from '@/components/LogoIcon';
 import { ParkingEntry } from '@/types/parking';
 import { LanguageProvider, useLanguage } from '@/contexts/LanguageContext';
 
@@ -96,8 +97,8 @@ function HomePage() {
             </div>
 
             {/* Center - Brand */}
-            <Navbar.Brand className="fw-bold text-primary">
-              <i className="bi bi-car-front me-2"></i>
+            <Navbar.Brand className="fw-bold text-primary d-flex align-items-center">
+              <LogoIcon size={24} />
               {t.appTitle}
             </Navbar.Brand>
 
